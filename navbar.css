@@ -43,16 +43,6 @@ header .nav {
     border-radius: var(--radius);
 }
 
-/* Burger menu */
-.burger {
-    display: none;
-    font-size: 1.5rem;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 /* Responsive */
 @media screen and (max-width: 768px) {
     .menu {
@@ -88,7 +78,4 @@ header .nav {
         text-align: center;
     }
 
-    .burger {
-        display: block;
-    }
 }
