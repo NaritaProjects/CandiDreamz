@@ -9,11 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
-  <link rel="icon" type="image/png" href="candy-favicon.png">
+  <link rel="icon" type="image/png" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <script src="motion.js" defer></script>
   <script src="navScroll.js" defer></script>
+  <script src="slideshow.js" defer></script>
+
 </head>
 
 <body>
@@ -22,7 +25,7 @@
   <header class="motion-slide" data-motion="slide-down">
     <div class="container nav">
       <a class="logo" href="#">
-        <img src="candiImg1.jpg" alt="CandiDreamz Logo" style="height:40px;border-radius:8px;">
+        <img src="Logo.jpg" alt="CandiDreamz Logo" style="height:40px;border-radius:8px;">
         <span>CandiDreamz</span>
       </a>
       <nav class="menu" aria-label="Primary">
@@ -69,7 +72,7 @@
 
       <div class="widget-grid scroll-x">
         <div class="service-widget motion-fade" data-motion="fade-up" data-delay="300">
-          <img src="candiImg1.jpg" alt="Small Tub">
+          <img src="smallTub.jpg" alt="Small Tub">
           <h3>Small Tub</h3>
           <p>Filled with a sweet mix of fruity and sour treats — the perfect solo snack. <strong>R65</strong></p>
         </div>
@@ -79,7 +82,7 @@
           <p>Double the fun! Packed with your favorite soft sweets, sour worms & rings. <strong>R95</strong></p>
         </div>
         <div class="service-widget motion-fade" data-motion="fade-up" data-delay="500">
-          <img src="candiImg1.jpg" alt="Custom Tub">
+          <img src="customTub.jpg" alt="Custom Tub">
           <h3>Custom Tub</h3>
           <p>Choose your favorites: sour strips, cherries, peach hearts, tutti fruity & more. <strong>Made to order!</strong></p>
         </div>
@@ -187,10 +190,55 @@
     </div>
   </section>
 
+  <!-- Sweet Tub Showcase -->
+<section id="sweet-showcase" style="background:var(--bg); padding:60px 0;">
+  <div class="container" style="text-align:center;">
+    <div class="section-head motion-fade" data-motion="fade-up">
+      <div>
+        <div class="eyebrow">Our Creations</div>
+        <h2>Sweet Tub Gallery</h2>
+        <p style="max-width:700px;margin:auto;opacity:0.8;">
+          A little peek at our candy magic — vibrant tubs stacked high and glowing under soft pink lights. 
+          Each bucket is hand-packed with your favorite sweets and made to look as good as it tastes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slideshow Container -->
+    <div class="slideshow-container motion-fade" data-motion="fade-up" data-delay="100">
+      <div class="mySlides fade">
+        <img src="img1.jpg" class="slide-img" alt="Sweet Tub 1">
+      </div>
+      <div class="mySlides fade">
+        <img src="img2.jpg" class="slide-img" alt="Sweet Tub 2">
+      </div>
+      <div class="mySlides fade">
+        <img src="img3.jpg" class="slide-img" alt="Sweet Tub 3">
+      </div>
+      <div class="mySlides fade">
+        <img src="img4.jpg" class="slide-img" alt="Sweet Tub 4">
+      </div>
+      <div class="mySlides fade">
+        <img src="img5.jpg" class="slide-img" alt="Sweet Tub 5">
+      </div>
+      <div class="mySlides fade">
+        <img src="img6.jpg" class="slide-img" alt="Sweet Tub 6">
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for fullscreen view -->
+  <div id="slideModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+</section>
+
+
   <!-- Footer -->
   <footer class="site-footer motion-fade" data-motion="fade-up">
     <div class="footer-top">
-      <img src="candidreamz-logo.jpg" alt="CandiDreamz Logo" class="footer-logo motion-fade" data-motion="fade-up">
+      <img src="Logo.jpg" alt="CandiDreamz Logo" class="footer-logo motion-fade" data-motion="fade-up">
       <strong>CandiDreamz</strong>
       <p class="motion-fade" data-motion="fade-up" data-delay="100">Yummy Candy · Events Planning · Custom Decorations</p>
       <div class="footer-socials motion-fade" data-motion="fade-up" data-delay="200">
@@ -200,7 +248,7 @@
     </div>
     <div class="footer-bottom motion-fade" data-motion="fade-up" data-delay="300">
       <div>© <span id="y"></span> CandiDreamz. All rights reserved.</div>
-      <div><a >🍬Imaan Gabier🍬</a> 
+      <div><a >🍬 Imaan Gabier 🍬</a> 
     </div>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>

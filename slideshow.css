@@ -1,0 +1,113 @@
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 60px auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    /* allows cards to stick out */
+}
+
+.mySlides {
+    position: absolute;
+    width: 60%;
+    height: 90%;
+    border-radius: var(--radius);
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.8s ease-in-out;
+    z-index: 0;
+}
+
+.mySlides.active {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    z-index: 3;
+}
+
+.mySlides.left {
+    opacity: 0.8;
+    transform: scale(0.9) translateX(-220px);
+    z-index: 2;
+}
+
+.mySlides.right {
+    opacity: 0.8;
+    transform: scale(0.9) translateX(220px);
+    z-index: 2;
+}
+
+.mySlides.far {
+    opacity: 0.3;
+    transform: scale(0.8);
+    z-index: 1;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.4);
+    cursor: pointer;
+}
+
+/* Hover pulse for center image only */
+.mySlides.active .slide-img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 95%;
+        height: 380px;
+    }
+
+    .mySlides {
+        width: 75%;
+    }
+
+    .mySlides.left {
+        transform: scale(0.9) translateX(-120px);
+    }
+
+    .mySlides.right {
+        transform: scale(0.9) translateX(120px);
+    }
+}
+
+.modal {
+    display: none;
+    /* hide it initially */
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal.open {
+    display: flex;
+    /* show when active */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #ff80c0;
+}
