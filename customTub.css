@@ -1,0 +1,31 @@
+#sweet-options li {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.2s;
+    border: 1px solid transparent;
+}
+
+#sweet-options li.selected {
+    border: 2px solid #ff9800;
+}
+
+/* sweetlist.css or inside a <style> tag */
+@media screen and (max-width: 480px) {
+
+    #minus-tubs,
+    #plus-tubs {
+        padding: 24px 28px;
+        /* larger tap area */
+        font-size: 20px;
+        /* bigger symbols */
+        border-radius: 12px;
+        /* optional rounded look */
+    }
+
+    #tub-quantity {
+        font-size: 20px;
+        /* match the buttons */
+        font-weight: bold;
+    }
+}
