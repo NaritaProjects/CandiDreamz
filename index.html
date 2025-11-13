@@ -26,9 +26,6 @@
         <span>CandiDreamz</span>
       </a>
       <nav class="menu" aria-label="Primary">
-        <a href="#menu">Sweet Tubs</a>
-        <a href="#specials">Specials</a>
-        <a href="#custom">Custom Tubs</a>
       </nav>
       <button class="burger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
     </div>
@@ -120,21 +117,70 @@
     </div>
   </section>
 
-  <!-- Custom Section -->
-  <section id="custom" class="motion-fade" data-motion="fade-up" style="background:var(--bg-soft)">
-    <div class="container">
-      <div class="section-head motion-fade" data-motion="fade-right">
-        <div>
-          <div class="eyebrow">Custom Orders</div>
-          <h2>Make It Yours</h2>
-        </div>
+  <!-- Sweet Options Section -->
+<section id="sweets" class="motion-fade" data-motion="fade-up" style="background:var(--bg)">
+  <div class="container">
+    <div class="section-head motion-fade" data-motion="fade-right">
+      <div>
+        <div class="eyebrow">Candy Selection</div>
+        <h2>Build Your Sweet Tub</h2>
       </div>
-      <p style="max-width:700px;margin:auto;text-align:center;line-height:1.7;">
-        Planning an event, kids’ party, or gift box? CandiDreamz offers <strong>custom candy tubs, event snacks, and themed decor</strong>. 
-        Choose your colors, candy types, and even labels — we’ll make your vision pop!
-      </p>
     </div>
-  </section>
+
+    <p style="text-align:center; max-width:800px; margin:auto; font-style:italic;">
+      Select the types of sweets you want. 4 types = Small Tub, 8 types = Big Tub. Then choose the number of tubs.
+    </p>
+
+    <!-- Sweet Selection Grid -->
+    <div class="sweet-list motion-fade" data-motion="fade-up" data-delay="100" style="max-width:900px;margin:30px auto;">
+      <ul id="sweet-options" style="list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:15px; padding:0; text-align:center;">
+        <li data-name="Sour Strips">🍬 Sour Strips</li>
+        <li data-name="Sour Worms">🍭 Sour Worms</li>
+        <li data-name="Peach Rings">🍑 Peach Rings</li>
+        <li data-name="Peach Hearts">💖 Peach Hearts</li>
+        <li data-name="Cherries">🍒 Cherries</li>
+        <li data-name="Watermelons">🍉 Watermelons</li>
+        <li data-name="Granidillaz">🥭 Granidillaz</li>
+        <li data-name="Baby Sharks">🦈 Baby Sharks</li>
+        <li data-name="Pink Puffs">💗 Pink Puffs</li>
+        <li data-name="Tutti Fruity">🍓 Tutti Fruity</li>
+      </ul>
+    </div>
+
+    <!-- Selected Sweets List -->
+    <div id="order-summary" style="max-width:600px;margin:20px auto;text-align:left;display:none;">
+      <h2>Your Selection:</h2>
+      <ul id="selected-sweets" style="list-style:none; padding:0; margin-bottom:15px;"></ul>
+
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <strong>Number of Tubs:</strong>
+        <button id="minus-tubs">-</button>
+        <span id="tub-quantity">1</span>
+        <button id="plus-tubs">+</button>
+      </div>
+
+      <p id="tub-size" style="font-weight:bold;"></p>
+      <p id="total-price" style="font-weight:bold;"></p>
+
+      <button id="order-btn" class="cta">Send Order via WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<style>
+#sweet-options li {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+  border: 1px solid transparent;
+}
+#sweet-options li.selected {
+  border: 2px solid #ff9800;
+}
+</style>
+
+<script src="sweetlist.js" defer></script>
 
   <!-- Contact -->
   <section id="contact" class="motion-fade" data-motion="fade-up">
@@ -161,7 +207,7 @@
     </div>
     <div class="footer-bottom motion-fade" data-motion="fade-up" data-delay="300">
       <div>© <span id="y"></span> CandiDreamz. All rights reserved.</div>
-      <div><a href="#">Privacy</a> · <a href="#">Terms</a></div>
+      <div><a >🍬Imaan Gabier🍬</a> 
     </div>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
