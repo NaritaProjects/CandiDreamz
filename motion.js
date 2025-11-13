@@ -1,6 +1,5 @@
-// motion.js
 document.addEventListener("DOMContentLoaded", () => {
-    // Exclude footer-bottom from permanent toggle
+    // ---------- Scroll Reveal Animations ----------
     const reveals = document.querySelectorAll(".reveal, [data-motion]:not(.footer-bottom)");
 
     function revealOnScroll() {
@@ -8,59 +7,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
         reveals.forEach((el) => {
             const rect = el.getBoundingClientRect();
-            const top = rect.top;
-            const bottom = rect.bottom;
             const offset = parseInt(el.dataset.offset) || 100;
             const delay = parseInt(el.dataset.delay) || 0;
 
-            // Animate when element enters viewport
-            if (top < windowHeight - offset && bottom > 0) {
+            if (rect.top < windowHeight - offset && rect.bottom > 0) {
                 if (!el.classList.contains("active")) {
                     setTimeout(() => el.classList.add("active"), delay);
                 }
             } else {
-                // Remove class when leaving viewport
                 el.classList.remove("active");
             }
         });
     }
 
-    // Trigger on load
     revealOnScroll();
-
-    // Scroll & resize listeners
     window.addEventListener("scroll", revealOnScroll);
     window.addEventListener("resize", revealOnScroll);
-
-    // Extra trigger after small delay
     setTimeout(revealOnScroll, 50);
 
-    // Animate footer separately once
     const footer = document.querySelector(".footer-bottom.motion-fade");
     if (footer) {
         const delay = parseInt(footer.dataset.delay) || 0;
         setTimeout(() => footer.classList.add("active"), delay);
     }
-});
 
-// Burger menu toggle
-const burger = document.querySelector(".burger");
-const menu = document.querySelector(".menu");
+    // ---------- Header Scroll Hide ----------
+    let lastScroll = 0;
+    const header = document.querySelector("header");
 
-burger.addEventListener("click", () => {
-    menu.classList.toggle("open");
-});
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-// Close menu when clicking any menu link
-menu.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-        menu.classList.remove("open");
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            // scrolling down
+            header.style.transform = "translateY(-100%)";
+        } else {
+            // scrolling up
+            header.style.transform = "translateY(0)";
+        }
+
+        lastScroll = currentScroll;
     });
-});
 
-// Close menu when scrolling
-window.addEventListener("scroll", () => {
-    if (menu.classList.contains("open")) {
-        menu.classList.remove("open");
-    }
+    // ---------- Burger Menu ----------
+    const burger = document.querySelector(".burger");
+    const menu = document.querySelector(".menu");
+
+    burger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
+
+    // Close menu when clicking any menu link
+    menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("open");
+        });
+    });
+
+    // Close menu on scroll
+    window.addEventListener("scroll", () => {
+        if (menu.classList.contains("open")) {
+            menu.classList.remove("open");
+        }
+    });
 });
