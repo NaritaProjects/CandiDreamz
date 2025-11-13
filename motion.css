@@ -1,0 +1,71 @@
+/* motion.css */
+/* Initial state for all motion elements */
+.motion-fade,
+.motion-slide,
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    /* slide up effect */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Active state triggers the animation */
+.motion-fade.active,
+.motion-slide.active,
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Example for slide-left / slide-right */
+.motion-slide-left {
+    transform: translateX(-30px);
+}
+
+.motion-slide-left.active {
+    transform: translateX(0);
+}
+
+.motion-slide-right {
+    transform: translateX(30px);
+}
+
+.motion-slide-right.active {
+    transform: translateX(0);
+}
+
+/* Optional delay via inline style or data-delay */
+[data-delay] {
+    transition-delay: var(--delay, 0ms);
+}
+
+/* Initial state for motion elements */
+.motion-fade,
+.motion-slide,
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    /* faster */
+}
+
+/* Active state */
+.motion-fade.active,
+.motion-slide.active,
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ---------- Scroll Reveal Animation ---------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

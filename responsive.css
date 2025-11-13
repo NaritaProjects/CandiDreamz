@@ -1,0 +1,218 @@
+/* ---------- Global Responsiveness ---------- */
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .split {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Hero section responsiveness */
+@media screen and (max-width: 768px) {
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 12px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .hero .container>div {
+        width: 100%;
+        max-width: 500px;
+        /* keeps card from stretching too wide */
+        box-sizing: border-box;
+    }
+
+    .hero h1,
+    .hero p {
+        text-align: center;
+    }
+
+    .hero .card {
+        margin-top: 20px;
+    }
+
+    .badges {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .badges .badge {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+/* ---------- Sections ---------- */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 40px 0;
+    }
+
+    .section-head {
+        text-align: center;
+    }
+
+    .section-head h2 {
+        font-size: 1.5rem;
+    }
+
+    .eyebrow {
+        font-size: 12px;
+    }
+
+    .lead {
+        font-size: 14px;
+    }
+}
+
+/* ---------- Widgets ---------- */
+@media screen and (max-width: 768px) {
+    .widget-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-widget img {
+        height: 180px;
+    }
+}
+
+/* ---------- Why Choose Us Responsive Padding ---------- */
+#why .split {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 40px;
+    /* adds horizontal space */
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+    #why .split {
+        gap: 20px;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #why .split {
+        flex-direction: column;
+        /* stack text + card vertically */
+        align-items: center;
+        padding: 0 20px;
+        /* smaller padding for mobile */
+    }
+
+    #why .split>div {
+        width: 100%;
+        max-width: 500px;
+        /* prevents content stretching too wide */
+    }
+
+    #why h2,
+    #why p,
+    #why ul {
+        text-align: center;
+    }
+
+    #why ul {
+        padding-left: 0;
+        /* remove default list indentation */
+        list-style-position: inside;
+    }
+
+    #why ul li {
+        margin-bottom: 12px;
+        line-height: 1.6;
+    }
+
+    #why .card {
+        width: 100%;
+        max-width: 500px;
+        padding: 16px;
+        text-align: center;
+    }
+}
+
+
+/* ---------- Footer ---------- */
+@media screen and (max-width: 768px) {
+
+    .footer-top,
+    .footer-bottom {
+        text-align: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-socials {
+        margin-top: 8px;
+    }
+
+    .footer-socials a {
+        margin: 0 4px;
+        font-size: 1rem;
+    }
+
+    .footer-logo {
+        width: 90px;
+    }
+}
+
+/* ---------- Slideshow ---------- */
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        height: 250px;
+    }
+
+    .prev,
+    .next {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+/* ---------- Extra Small Screens ---------- */
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .cta,
+    button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .service-widget img {
+        height: 150px;
+    }
+
+    .section-head h2 {
+        font-size: 1.3rem;
+    }
+}

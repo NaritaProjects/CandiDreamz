@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CandiDreamz | Sweet Tubs & Custom Candy in Cape Town</title>
+  <meta name="description" content="CandiDreamz — your go-to for sweet tubs, sour strips, peach rings, and more! Order online via WhatsApp for delivery in Rondebosch & Mowbray." />
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" type="image/png" href="candy-favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script src="main.js" defer></script>
+  <script src="motion.js" defer></script>
+  <script src="navScroll.js" defer></script>
+</head>
+
+<body>
+
+
+  <!-- Header -->
+  <header class="motion-slide" data-motion="slide-down">
+    <div class="container nav">
+      <a class="logo" href="#">
+        <img src="candidreamz-logo.jpg" alt="CandiDreamz Logo" style="height:40px;border-radius:8px;">
+        <span>CandiDreamz</span>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="#menu">Sweet Tubs</a>
+        <a href="#specials">Specials</a>
+        <a href="#custom">Custom Tubs</a>
+        <a href="#contact" class="cta">Order Now</a>
+      </nav>
+      <button class="burger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero motion-fade" data-motion="fade-up">
+    <div class="container">
+      <div>
+        <div class="eyebrow motion-fade" data-motion="fade-right" data-delay="100">
+          The Sweetest Treats in Cape Town
+        </div>
+
+        <h1 class="motion-fade" data-motion="fade-up" data-delay="200">
+          CandiDreamz – Where Every Bite Is Happiness 🍬
+        </h1>
+
+        <p class="motion-fade" data-motion="fade-up" data-delay="300">
+          Indulge in our colorful range of <strong>sweet tubs, sour strips, and fruity favorites</strong>.
+          Perfect for gifts, parties, or simply treating yourself — available for delivery in 
+          <strong>Rondebosch & Mowbray</strong>.
+        </p>
+
+        <div class="badges motion-fade" data-motion="fade-up" data-delay="400">
+          <span class="badge">Fresh & Fun</span>
+          <span class="badge">Custom Tubs</span>
+          <span class="badge">SnapScan • Card • Cash</span>
+        </div>
+
+        <div style="margin-top:20px" class="motion-fade" data-motion="fade-up" data-delay="500">
+          <a href="https://wa.me/27677327559" target="_blank" class="cta">
+            💬 Order via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" style="background:var(--bg-soft)" class="motion-fade" data-motion="fade-up">
+    <div class="container">
+      <div class="section-head motion-fade" data-motion="fade-right">
+        <div>
+          <div class="eyebrow">Sweet Tubs</div>
+          <h2>Our Signature Candy Collection</h2>
+        </div>
+      </div>
+
+      <div class="widget-grid scroll-x">
+        <div class="service-widget motion-fade" data-motion="fade-up" data-delay="300">
+          <img src="candiImg1.jpg" alt="Small Tub">
+          <h3>Small Tub</h3>
+          <p>Filled with a sweet mix of fruity and sour treats — the perfect solo snack. <strong>R65</strong></p>
+        </div>
+        <div class="service-widget motion-fade" data-motion="fade-up" data-delay="400">
+          <img src="candiImg1.jpg" alt="Big Tub">
+          <h3>Big Tub</h3>
+          <p>Double the fun! Packed with your favorite soft sweets, sour worms & rings. <strong>R95</strong></p>
+        </div>
+        <div class="service-widget motion-fade" data-motion="fade-up" data-delay="500">
+          <img src="candiImg1.jpg" alt="Custom Tub">
+          <h3>Custom Tub</h3>
+          <p>Choose your favorites: sour strips, cherries, peach hearts, tutti fruity & more. <strong>Made to order!</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specials -->
+  <section id="specials" class="motion-fade" data-motion="fade-up">
+    <div class="container split">
+      <div class="motion-fade" data-motion="fade-right">
+        <div class="eyebrow">Sweet Deals</div>
+        <h2>Special Offers You’ll Love</h2>
+        <ul>
+          <li>🍬 2 Big Tubs – <strong>R180</strong></li>
+          <li>🍭 3 Small Tubs – <strong>R180</strong></li>
+          <li>🍡 6 Small Tubs – <strong>R330</strong></li>
+          <li>🍧 6 Big Tubs – <strong>R499</strong></li>
+        </ul>
+        <p style="margin-top:10px;">Mix & match your favorite flavors — perfect for sharing or gifting.</p>
+      </div>
+
+      <div class="card motion-fade" data-motion="fade-left" data-delay="100">
+        <h3 style="margin-top:0">Ready to Order?</h3>
+        <p>Send us a WhatsApp message to order your tubs or ask about custom options.</p>
+        <a href="https://wa.me/27677327559" target="_blank" class="cta" style="width:100%;display:block;text-align:center;padding:12px;">💬 WhatsApp Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Section -->
+  <section id="custom" class="motion-fade" data-motion="fade-up" style="background:var(--bg-soft)">
+    <div class="container">
+      <div class="section-head motion-fade" data-motion="fade-right">
+        <div>
+          <div class="eyebrow">Custom Orders</div>
+          <h2>Make It Yours</h2>
+        </div>
+      </div>
+      <p style="max-width:700px;margin:auto;text-align:center;line-height:1.7;">
+        Planning an event, kids’ party, or gift box? CandiDreamz offers <strong>custom candy tubs, event snacks, and themed decor</strong>. 
+        Choose your colors, candy types, and even labels — we’ll make your vision pop!
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="motion-fade" data-motion="fade-up">
+    <div class="container">
+      <div class="eyebrow motion-fade" data-motion="fade-right">Contact</div>
+      <h2 class="motion-fade" data-motion="fade-up" data-delay="100">Order or Enquire Now</h2>
+      <p class="lead motion-fade" data-motion="fade-up" data-delay="200">
+        Message us directly on WhatsApp for pricing, specials, or event orders.
+      </p>
+      <a href="https://wa.me/27677327559" target="_blank" class="cta motion-fade" data-motion="fade-up" data-delay="300" style="padding:16px 20px;">💬 Chat with Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer motion-fade" data-motion="fade-up">
+    <div class="footer-top">
+      <img src="candidreamz-logo.jpg" alt="CandiDreamz Logo" class="footer-logo motion-fade" data-motion="fade-up">
+      <strong>CandiDreamz</strong>
+      <p class="motion-fade" data-motion="fade-up" data-delay="100">Yummy Candy · Events Planning · Custom Decorations</p>
+      <div class="footer-socials motion-fade" data-motion="fade-up" data-delay="200">
+        <a href="https://www.instagram.com/candi.dreamz/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/27677327559" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom motion-fade" data-motion="fade-up" data-delay="300">
+      <div>© <span id="y"></span> CandiDreamz. All rights reserved.</div>
+      <div><a href="#">Privacy</a> · <a href="#">Terms</a></div>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
+
+</body>
+</html>
