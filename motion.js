@@ -42,3 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => footer.classList.add("active"), delay);
     }
 });
+
+// Burger menu toggle
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
+
+burger.addEventListener("click", () => {
+    menu.classList.toggle("open");
+});
+
+// Close menu when clicking any menu link
+menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("open");
+    });
+});
+
+// Close menu when scrolling
+window.addEventListener("scroll", () => {
+    if (menu.classList.contains("open")) {
+        menu.classList.remove("open");
+    }
+});
