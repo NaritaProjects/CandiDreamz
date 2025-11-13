@@ -1,5 +1,6 @@
 let slideIndex = 0;
 const slides = document.querySelectorAll(".mySlides");
+const slider = document.querySelector(".slideshow-container");
 let autoSlideTimer;
 
 // 🔄 Update slide positions
@@ -52,17 +53,51 @@ slides.forEach((slide) => {
 
 // 👆 Swipe controls (mobile)
 let startX = 0;
-document.querySelector(".slideshow-container").addEventListener("touchstart", (e) => {
+slider.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
-});
+}, { passive: true });
 
-document.querySelector(".slideshow-container").addEventListener("touchend", (e) => {
+slider.addEventListener("touchmove", (e) => {
+    e.stopPropagation(); // prevent page scrolling horizontally
+}, { passive: false });
+
+slider.addEventListener("touchend", (e) => {
     const endX = e.changedTouches[0].clientX;
     const diff = startX - endX;
     if (Math.abs(diff) > 50) {
         if (diff > 0) nextSlide();
         else prevSlide();
     }
+});
+
+// 🖱 Desktop drag support (optional)
+let isDragging = false;
+let dragStartX = 0;
+
+slider.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    dragStartX = e.pageX;
+    slider.classList.add("grabbing");
+});
+
+slider.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const diff = dragStartX - e.pageX;
+    if (Math.abs(diff) > 50) {
+        if (diff > 0) nextSlide();
+        else prevSlide();
+        dragStartX = e.pageX; // reset after moving
+    }
+});
+
+slider.addEventListener("mouseup", () => {
+    isDragging = false;
+    slider.classList.remove("grabbing");
+});
+
+slider.addEventListener("mouseleave", () => {
+    isDragging = false;
+    slider.classList.remove("grabbing");
 });
 
 // ⏱ Initialize

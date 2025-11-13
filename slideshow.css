@@ -111,3 +111,18 @@
 .close:hover {
     color: #ff80c0;
 }
+
+.slideshow-container {
+    touch-action: pan-y;
+    /* allow vertical scroll but prevent horizontal scroll */
+    overflow-x: hidden;
+    /* hide any horizontal overflow */
+}
+
+.slideshow-container {
+    cursor: grab;
+}
+
+.slideshow-container.grabbing {
+    cursor: grabbing;
+}
