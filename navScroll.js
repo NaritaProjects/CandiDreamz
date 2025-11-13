@@ -17,12 +17,11 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector(".burger");
-    const menu = document.querySelector(".menu");
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
 
-    burger.addEventListener("click", () => {
-        menu.classList.toggle("open");
-    });
+burger.addEventListener("click", () => {
+    menu.classList.toggle("open");
 });
+
 
