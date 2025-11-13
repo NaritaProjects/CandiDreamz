@@ -236,22 +236,27 @@
 
 
   <!-- Footer -->
-  <footer class="site-footer motion-fade" data-motion="fade-up">
-    <div class="footer-top">
-      <img src="Logo.jpg" alt="CandiDreamz Logo" class="footer-logo motion-fade" data-motion="fade-up">
-      <strong>CandiDreamz</strong>
-      <p class="motion-fade" data-motion="fade-up" data-delay="100">Yummy Candy · Events Planning · Custom Decorations</p>
-      <div class="footer-socials motion-fade" data-motion="fade-up" data-delay="200">
-        <a href="https://www.instagram.com/candi.dreamz/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/27677327559" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      </div>
+<footer class="site-footer">
+  <div class="footer-top motion-fade" data-motion="fade-up">
+    <img src="Logo.jpg" alt="CandiDreamz Logo" class="footer-logo motion-fade" data-motion="fade-up">
+    <strong>CandiDreamz</strong>
+    <p class="motion-fade" data-motion="fade-up" data-delay="100">Yummy Candy · Events Planning · Custom Decorations</p>
+    <div class="footer-socials motion-fade" data-motion="fade-up" data-delay="200">
+      <a href="https://www.instagram.com/candi.dreamz/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/27677327559" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
-    <div class="footer-bottom motion-fade" data-motion="fade-up" data-delay="300">
-      <div>© <span id="y"></span> CandiDreamz. All rights reserved.</div>
-      <div><a >🍬 Imaan Gabier 🍬</a> 
-    </div>
-    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-  </footer>
+  </div>
+
+  <!-- Footer bottom always visible, no motion-fade -->
+  <div class="footer-bottom">
+    <div>© <span id="y"></span> CandiDreamz. All rights reserved.</div>
+    <div><a>🍬 Imaan Gabier 🍬</a></div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</footer>
 
 </body>
 </html>
